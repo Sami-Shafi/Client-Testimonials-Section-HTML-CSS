@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Raleway&display=swap');
+
+/* normal variables and typo */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --primCol: #40407A;
+    --secCol: #E74C3C;
+    --montserrat: "Montserrat", sans-serif;
+    --raleway: "Raleway", sans-serif;
+}
+body {
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    background-color: var(--primCol);
+}
+.container {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h2 {
+    font-family: var(--montserrat);
+    font-size: 43px;
+    font-weight: 400;
+    color: #fff;
+    text-transform: uppercase;
+    padding-bottom: 40px;
+    position: relative;
+}
+h2::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    border: 2px solid #fff;
+}
+.tes-wrap {
+    margin-top: 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+.tes-wrap::after, .tes-wrap::before {
+    content: "";
+    position: absolute;
+    width: 90px;
+    height: 81px;
+}
+.tes-wrap::before {
+    background: url("../image/left-quote.png") no-repeat;
+    left: 0;
+    top: -50px;
+}
+.tes-wrap::after {
+    background: url("../image/right-quote.png") no-repeat;
+    right: 0;
+    bottom: -45px;
+}
+.tes {
+    background-color: var(--secCol);
+    padding: 40px 25px;
+    border-radius: 5px;
+    margin: 0 14.5px;
+}
+.tes:first-child {
+    margin-left: 0;
+}
+.tes:last-child {
+    margin-right: 0;
+}
+.tes p {
+    color: #fff;
+    font-family: var(--raleway);
+}
+.person p {
+    font-size: 23px;
+    line-height: 1.6;
+}
+.tes > p {
+    font-size: 18px;
+    line-height: 1.4;
+}
+.tes img {
+    width: 80px;
+    height: 80px;
+    clip-path: circle(50% at 50% 50%);
+    object-fit: cover;
+    margin-right: 30px;
+}
+.person {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+}
